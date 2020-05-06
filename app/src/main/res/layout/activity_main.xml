@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:text="Izquierda"
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonIzq"
+        android:background="@color/colorPrimaryDark"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:text="Derecha"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonDer"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_alignBaseline="@+id/buttonIzq"
+        android:layout_alignBottom="@+id/buttonIzq"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Ambos"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonAmb"
+        android:background="@android:color/white"
+        android:layout_below="@+id/buttonIzq"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Colored" />
+
+    <com.flask.colorpicker.ColorPickerView
+        android:id="@+id/color_picker_view"
+        android:layout_width="242dp"
+        android:layout_height="238dp"
+        app:alphaSlider="false"
+        app:density="12"
+        app:lightnessSlider="true"
+        app:wheelType="FLOWER"
+        app:lightnessSliderView="@+id/v_lightness_slider"
+        app:alphaSliderView="@+id/v_alpha_slider"
+        android:layout_below="@+id/buttonAmb"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp" />
+
+    <com.flask.colorpicker.slider.LightnessSlider
+        android:id="@+id/v_lightness_slider"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_above="@+id/buttonON"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="9dp" />
+
+    <Button
+        android:text="Encender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonON"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/buttonIzq"
+        android:layout_alignStart="@+id/buttonIzq"
+        android:layout_marginBottom="11dp"
+        android:background="@android:color/holo_green_dark" />
+
+    <Button
+        android:text="Apagar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonOFF"
+        android:layout_alignBaseline="@+id/buttonON"
+        android:layout_alignBottom="@+id/buttonON"
+        android:layout_alignRight="@+id/buttonDer"
+        android:layout_alignEnd="@+id/buttonDer"
+        android:background="@android:color/holo_red_dark" />
+
+    <!--
+        <com.flask.colorpicker.slider.AlphaSlider
+            android:id="@+id/v_alpha_slider"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            />
+-->
+    </RelativeLayout>
